@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 
 export interface SupportProps {}
 
+const time = Date.now()
 export const Support: FunctionComponent<SupportProps> = props => {
   return (
     <Layout>
@@ -45,7 +46,8 @@ export const Support: FunctionComponent<SupportProps> = props => {
 
         <div className="anchor">
           <a href="#commercial-support" className="anchor">
-            <img src="dist/assets/anchor.png" alt="anchor icon" />
+            {" "}
+            <img src="dist/assets/anchor.png" alt="anchor icon" />{" "}
           </a>
           <h2 className="bold">
             <a id="commercial-support">Commercial Support</a>

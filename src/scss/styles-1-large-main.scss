@@ -1,14 +1,13 @@
 // GLOBAL CSS
 $mainblue: #152935;
-$maingrey: #F5F5F5;
+$maingrey: #f5f5f5;
 $palegrey: #e6e6e6;
-$brighterblue: #3D70B2;
+$brighterblue: #3d70b2;
 $accentgrey: #dadada;
 $tableblue-odd: #182336;
-$tableblue-even: #1F2F4E;
+$tableblue-even: #1f2f4e;
 $translucent-blue: rgba(21, 41, 53, 0.05);
 $headersize: 1.4rem;
-
 
 .blue-bg {
   background: url(https://adoptopenjdk.net/dist/assets/background.png);
@@ -24,16 +23,21 @@ $headersize: 1.4rem;
   color: $mainblue;
 }
 
-.dark-link, .dark-link:visited, a, a:visited {
+.dark-link,
+.dark-link:visited,
+a,
+a:visited {
   color: $mainblue;
   cursor: pointer;
 }
 
-.dark-link:hover, a:hover {
+.dark-link:hover,
+a:hover {
   color: $brighterblue;
 }
 
-.light-link, .light-link:visited {
+.light-link,
+.light-link:visited {
   color: $maingrey;
 }
 
@@ -45,12 +49,14 @@ $headersize: 1.4rem;
   text-decoration: none;
 }
 
-.blue-link-section a *, .blue-link-section a {
+.blue-link-section a *,
+.blue-link-section a {
   color: $brighterblue;
   text-decoration: none;
 }
 
-.blue-link-section a *:hover, .blue-link-section a:hover {
+.blue-link-section a *:hover,
+.blue-link-section a:hover {
   text-decoration: underline;
 }
 
@@ -155,9 +161,9 @@ $headersize: 1.4rem;
   border-radius: 50px;
   box-sizing: border-box;
   border: 1px solid transparent;
-  transition: .5s;
+  transition: 0.5s;
   background: #ffffff;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .fa-stack:hover {
@@ -198,7 +204,7 @@ nav {
   cursor: pointer;
 }
 
-#logo  img{
+#logo img {
   height: 2.5em;
 }
 
@@ -267,7 +273,7 @@ nav {
 #menu-content a {
   text-decoration: none;
   display: block;
-  padding: .8rem 0;
+  padding: 0.8rem 0;
 }
 
 #menu-content ul {
@@ -283,7 +289,7 @@ nav {
 }
 
 #menu-content .submenu > a > .twisty {
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   margin-right: 0.5rem;
   color: $brighterblue;
   float: left;
@@ -299,7 +305,7 @@ nav {
   line-height: 0.9rem;
   border-top: 1px solid $accentgrey;
   border-bottom: none;
-  background-color: rgba(255,255,255,.4);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 #menu-content .submenu.open > ul {
@@ -317,10 +323,11 @@ nav {
 
 // MAIN CSS
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    // height: 100%;     // removed to see if this fixes scrolling issue on iPhone
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  // height: 100%;     // removed to see if this fixes scrolling issue on iPhone
 }
 
 main {
@@ -380,7 +387,7 @@ main {
   text-decoration: none;
 }
 
-.empty-download{
+.empty-download {
   border-radius: 0.2rem;
   font-size: inherit;
   width: 100%;
@@ -434,7 +441,8 @@ code.highlighted {
   display: inline;
 }
 
-.copy-code-button, code.highlighted {
+.copy-code-button,
+code.highlighted {
   padding: 0.2rem 1rem;
 }
 
@@ -451,7 +459,15 @@ code.highlighted {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-span.hljs-keyword, span.hljs-selector-tag, span.hljs-literal, span.hljs-doctag, span.hljs-title, span.hljs-section, span.hljs-type, span.hljs-name, span.hljs-strong {
+span.hljs-keyword,
+span.hljs-selector-tag,
+span.hljs-literal,
+span.hljs-doctag,
+span.hljs-title,
+span.hljs-section,
+span.hljs-type,
+span.hljs-name,
+span.hljs-strong {
   font-weight: normal;
 }
 
@@ -463,8 +479,8 @@ span.hljs-keyword, span.hljs-selector-tag, span.hljs-literal, span.hljs-doctag, 
 
 a.anchor {
   visibility: hidden;
-  float:left;
-  padding: .2rem;
+  float: left;
+  padding: 0.2rem;
 }
 
 div.anchor {
@@ -501,16 +517,16 @@ select#platform-selector:hover {
 }
 
 select#platform-selector:focus {
-  outline:0;
+  outline: 0;
 }
 
 select#platform-selector::-ms-expand {
-    display: none;
+  display: none;
 }
 
-@media screen and (min-width:0\0) {
-    select#platform-selector {
-    background:none\9;
+@media screen and (min-width: 0\0) {
+  select#platform-selector {
+    background: none\9;
     padding: 5px\9;
   }
 }
@@ -587,7 +603,7 @@ select#platform-selector::-ms-expand {
 }
 
 [data-tooltip]:after {
-  content: '';
+  content: "";
   display: none;
   position: absolute;
   border-color: transparent;
@@ -636,29 +652,28 @@ footer p {
   display: none;
 }
 
-
 // STAGING SERVER BANNER CSS
 
 /* The alert message box */
 .alert {
-   padding: 20px;
-   background-color: #ff9800; /* orange */
-   color: white;
+  padding: 20px;
+  background-color: #ff9800; /* orange */
+  color: white;
 }
 
 /* The close button */
 .closebtn {
-   margin-left: 15px;
-   color: white;
-   font-weight: bold;
-   float: right;
-   font-size: 22px;
-   line-height: 20px;
-   cursor: pointer;
-   transition: 0.3s;
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 /* When moving the mouse over the close button */
 .closebtn:hover {
-   color: black;
+  color: black;
 }

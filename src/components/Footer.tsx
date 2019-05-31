@@ -1,14 +1,13 @@
 import React, { FunctionComponent } from "react"
 
+import SocialBar from "./SocialBar"
+import gitHubIcon from "./Footer/GitHub.png"
+import jenkinsIcon from "./Footer/jenkins_headshot.png"
+import slackIcon from "./Footer/slack.svg"
+
 export interface FooterProps {}
 
-interface SocialBarProps {}
-
-const SocialBar: React.FunctionComponent<SocialBarProps> = props => {
-  return <div />
-}
-
-export const Footer: FunctionComponent<FooterProps> = props => {
+export const Footer: FunctionComponent<FooterProps> = () => {
   return (
     <footer>
       <div className="margin-auto">
@@ -18,11 +17,7 @@ export const Footer: FunctionComponent<FooterProps> = props => {
             target="_blank"
             className="light-link no-underline"
           >
-            <img
-              src="dist/assets/slack.svg"
-              alt="Slack logo"
-              className="footer-logo"
-            />
+            <img src={slackIcon} alt="Slack logo" className="footer-logo" />
             <p className="margin-auto">Slack</p>
           </a>
         </div>
@@ -33,11 +28,7 @@ export const Footer: FunctionComponent<FooterProps> = props => {
             target="_blank"
             className="light-link no-underline"
           >
-            <img
-              src="dist/assets/GitHub.png"
-              alt="GitHub logo"
-              className="footer-logo"
-            />
+            <img src={gitHubIcon} alt="GitHub logo" className="footer-logo" />
             <p className="margin-auto">GitHub repos</p>
           </a>
         </div>
@@ -48,11 +39,7 @@ export const Footer: FunctionComponent<FooterProps> = props => {
             target="_blank"
             className="light-link no-underline"
           >
-            <img
-              src="dist/assets/jenkins_headshot.png"
-              alt="Jenkins logo"
-              className="footer-logo"
-            />
+            <img src={jenkinsIcon} alt="Jenkins logo" className="footer-logo" />
             <p className="margin-auto">Jenkins CI</p>
           </a>
         </div>
@@ -62,13 +49,13 @@ export const Footer: FunctionComponent<FooterProps> = props => {
         <SocialBar />
       </div>
 
-      <p>
+      <p style={{ lineHeight: "1rem" }}>
         Java and OpenJDK are trademarks or registered trademarks of Oracle
         and/or its affiliates. Other names may be trademarks of their respective
         owners.
       </p>
       <br />
-      <p>
+      <p style={{ lineHeight: "1rem" }}>
         <strong>Spotted an issue with the website?</strong>
         <br />
         <a
