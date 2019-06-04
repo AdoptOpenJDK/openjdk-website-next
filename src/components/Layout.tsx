@@ -12,6 +12,9 @@ import { registerIcons } from "office-ui-fabric-react"
 registerIcons({
   icons: {
     "arrow-circle-left": <i className="fa fa-arrow-circle-left" />,
+    bars: <i className="fa fa-bars" />,
+    cancel: <i className="fa fa-times" />,
+    chevrondown: <i className="fa fa-chevron-down" />,
   },
 })
 

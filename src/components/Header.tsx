@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState } from "react"
 
+import { IconButton } from "office-ui-fabric-react"
 import Menu from "./Header/Menu"
 import SocialBar from "./SocialBar"
 import logo from "./adopt_logo_white.svg"
@@ -23,9 +24,16 @@ export const Header: FunctionComponent<HeaderProps> = () => {
     <>
       <Menu isOpen={isMenuOpen} onClick={handleClick} />
       <nav>
-        <button style={{ border: "none", padding: 0 }} onClick={handleClick}>
-          <i id="menu-button" className="fa fa-bars" aria-hidden="true" />
-        </button>
+        <IconButton
+          styles={{
+            icon: { color: "white", fontSize: "2.25em" },
+            root: { left: 82, top: 42 },
+          }}
+          iconProps={{ iconName: "bars" }}
+          title="Menu"
+          onClick={handleClick}
+        />
+
         <a id="logo" href="/" className="a-button">
           <img src={logo} alt="AdoptOpenJDK" />
         </a>
