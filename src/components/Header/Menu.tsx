@@ -67,6 +67,11 @@ export const Menu: FunctionComponent<MenuProps> = ({ isOpen, onClick }) => {
                 ],
               },
             ]}
+            styles={{
+              group: { fontFamily: "'Open Sans', sans-serif" },
+              compositeLink: { backgroundColor: "inherit" },
+              link: { fontFamily: "'Open Sans', sans-serif" },
+            }}
           />
           <div className="align-center">
             <div id="menu-social-bar">

@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react"
 
+import { Link } from "gatsby"
 import SocialBar from "./SocialBar"
 import gitHubIcon from "./Footer/GitHub.png"
 import jenkinsIcon from "./Footer/jenkins_headshot.png"
@@ -12,14 +13,10 @@ export const Footer: FunctionComponent<FooterProps> = () => {
     <footer>
       <div className="margin-auto">
         <div className="footer-icon align-center inline-block">
-          <a
-            href="./slack.html"
-            target="_blank"
-            className="light-link no-underline"
-          >
+          <Link to="/slack" className="light-link no-underline">
             <img src={slackIcon} alt="Slack logo" className="footer-logo" />
             <p className="margin-auto">Slack</p>
-          </a>
+          </Link>
         </div>
 
         <div className="footer-icon align-center inline-block">

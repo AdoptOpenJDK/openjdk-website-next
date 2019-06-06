@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState } from "react"
 
 import { IconButton } from "office-ui-fabric-react"
+import { Link } from "gatsby"
 import Menu from "./Header/Menu"
 import SocialBar from "./SocialBar"
 import logo from "./adopt_logo_white.svg"
@@ -34,9 +35,9 @@ export const Header: FunctionComponent<HeaderProps> = () => {
           onClick={handleClick}
         />
 
-        <a id="logo" href="/" className="a-button">
+        <Link id="logo" to="/" className="a-button">
           <img src={logo} alt="AdoptOpenJDK" />
-        </a>
+        </Link>
         <div id="header-social-bar">
           <SocialBar />
         </div>
