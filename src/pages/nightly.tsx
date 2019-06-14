@@ -1,6 +1,8 @@
 import React, {FunctionComponent, SyntheticEvent} from "react"
 import Layout from "../components/Layout"
 import Loading from "../components/Loading";
+import NavButton from "../components/NavButton"
+import { PrimaryButton } from 'office-ui-fabric-react'
 import ReleaseSelector from "../components/ReleaseSelector";
 
 import "../scss/styles-3-nightly.scss"
@@ -23,18 +25,8 @@ const Nightly: FunctionComponent<NightlyProps> = props => {
     return (
         <Layout>
             <h1 className="large-title">Nightly builds</h1>
-            <a href="./releases" className="blue-button a-button">
-                <div>
-                    <span>Latest Release</span>
-                    <i className="fa fa-arrow-circle-o-right" aria-hidden="true"/>
-                </div>
-            </a>
-            <a href="./archive" id="nightly-button" className="grey-button a-button">
-                <div>
-                    <span>Release Archive</span>
-                    <i className="fa fa-arrow-circle-o-right" aria-hidden="true"/>
-                </div>
-            </a>
+            <NavButton href="./releases" type="primary">Latest Release</NavButton>
+            <NavButton href="./archive" type="secondary">Release Archive</NavButton>
             <ReleaseSelector
                 onVersionChange={(e: SyntheticEvent) => {
                     console.log(e)

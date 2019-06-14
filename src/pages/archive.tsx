@@ -8,6 +8,7 @@ import "../scss/styles-12-archive.scss"
 import ArchiveReleaseRow from "../components/Archive/ArchiveReleaseRow";
 import ReleaseSelector from "../components/ReleaseSelector";
 import Loading from "../components/Loading";
+import NavButton from "../components/NavButton";
 
 const Archive: FunctionComponent<ArchiveProps> = props => {
 
@@ -31,22 +32,11 @@ const Archive: FunctionComponent<ArchiveProps> = props => {
                     <h1 className="large-title">Archive</h1>
 
                     <div className="callout">
-                        <p>Please be aware that using old, superseded, or otherwise unsupported releases is not
-                            recommended.</p>
+                        <p>Please be aware that using old, superseded, or otherwise unsupported releases is not recommended.</p>
                     </div>
 
-                    <a href="./releases.html" id="latest-button" className="blue-button a-button">
-                        <div>
-                            <span>Latest release</span>
-                            <i className="fa fa-arrow-circle-o-right" aria-hidden="true"/>
-                        </div>
-                    </a>
-                    <a href="./nightly.html" id="nightly-button" className="grey-button a-button">
-                        <div>
-                            <span>Nightly builds</span>
-                            <i className="fa fa-arrow-circle-o-right" aria-hidden="true"/>
-                        </div>
-                    </a>
+                    <NavButton href="releases" type="primary">Latest Releases</NavButton>
+                    <NavButton href="nightly" type="secondary">Nightly Builds</NavButton>
 
                     <ReleaseSelector
                         onVersionChange={(e: SyntheticEvent)=> {console.log(e)}}

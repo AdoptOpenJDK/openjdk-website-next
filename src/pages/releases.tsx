@@ -5,8 +5,10 @@ import ReleasesPlatforms from "../components/Releases/ReleasesPlatforms"
 import ReleaseSelector from "../components/ReleaseSelector"
 
 import "../scss/styles-4-releases.scss"
+import NavButton from "../components/NavButton";
 
-export interface ReleasesProps {}
+export interface ReleasesProps {
+}
 
 export const Releases: FunctionComponent<ReleasesProps> = props => {
 
@@ -29,42 +31,34 @@ export const Releases: FunctionComponent<ReleasesProps> = props => {
         ]
     }]
 
-    if(loading) {
-        <Loading />
+    if (loading) {
+        <Loading/>
     }
 
     return (
         <Layout>
             <main className="grey-bg">
-                <div id="latest-page" style={{marginBottom: '2rem'}}>
+                <div id="latest-page">
                     <h1 className="large-title">Latest release</h1>
 
-                    <div>
-                        <a href="./archive.html" className="blue-button a-button">
-                            <div>
-                                <span>Build archive</span>
-                                <i className="fa fa-arrow-circle-o-right" aria-hidden="true"/>
-                            </div>
-                        </a>
-                        <a href="./nightly.html" id="nightly-button" className="grey-button a-button">
-                            <div>
-                                <span>Nightly builds</span>
-                                <i className="fa fa-arrow-circle-o-right" aria-hidden="true"/>
-                            </div>
-                        </a>
-                        <ReleaseSelector
-                            onVersionChange={(e: SyntheticEvent)=> {console.log(e)}}
-                            onJVMChange={(e: SyntheticEvent)=> {console.log(e)}}
-                        />
-                    </div>
+                    <NavButton href="./archive" type="primary">Build archive</NavButton>
+                    <NavButton href="./nightly" type="secondary">Nightly builds</NavButton>
+                    <ReleaseSelector
+                        onVersionChange={(e: SyntheticEvent) => {
+                            console.log(e)
+                        }}
+                        onJVMChange={(e: SyntheticEvent) => {
+                            console.log(e)
+                        }}
+                    />
 
-                        <div id="latest-container">
-                            <ReleasesPlatforms platforms={platforms}/>
-                        </div>
+                    <div id="latest-container">
+                        <ReleasesPlatforms platforms={platforms}/>
                     </div>
+                </div>
             </main>
         </Layout>
-)
+    )
 }
 
 export default Releases
