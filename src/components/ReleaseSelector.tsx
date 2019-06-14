@@ -1,15 +1,19 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, SyntheticEvent } from 'react'
 import {ChoiceGroup} from "office-ui-fabric-react";
 
-export interface ReleaseSelectorProps {}
+export interface ReleaseSelectorProps {
+    onVersionChange(e: SyntheticEvent): void;
+    onJVMChange(e: SyntheticEvent): void;
+}
 
-const ReleaseSelector: FunctionComponent<ReleaseSelectorProps> = (props) => {
+const ReleaseSelector: FunctionComponent<ReleaseSelectorProps> = ({onVersionChange, onJVMChange}) => {
     return (
       <div className="btn-container">
         <form id="jdk-selector" className="btn-form">
           <h3>1. Choose a Version</h3>
           <ChoiceGroup
             defaultSelectedKey="A"
+            onChange={onVersionChange}
             options={[
                 {
                     key: 'A',
@@ -30,6 +34,7 @@ const ReleaseSelector: FunctionComponent<ReleaseSelectorProps> = (props) => {
           <h3>2. Choose a JVM</h3>
           <ChoiceGroup
             defaultSelectedKey="A"
+            onChange={onJVMChange}
             options={[
                 {
                     key: 'A',

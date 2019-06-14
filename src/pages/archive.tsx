@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from 'react'
+import React, {FunctionComponent, SyntheticEvent} from 'react'
 import Layout from '../components/Layout'
 
 export interface ArchiveProps {
@@ -37,7 +37,10 @@ const Archive: FunctionComponent<ArchiveProps> = props => {
                         </div>
                     </a>
 
-                    <ReleaseSelector/>
+                    <ReleaseSelector
+                        onVersionChange={(e: SyntheticEvent)=> {console.log(e)}}
+                        onJVMChange={(e: SyntheticEvent)=> {console.log(e)}}
+                    />
 
                     <div id="loading">
                         <img src="dist/assets/loading_dots.gif" width="40" height="40" alt="Content is loading."/>

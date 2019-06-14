@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from "react"
+import React, {FunctionComponent, SyntheticEvent} from "react"
 import {ChoiceGroup} from "office-ui-fabric-react/lib/ChoiceGroup"
 
 import Layout from "../components/Layout"
@@ -49,7 +49,10 @@ export const Releases: FunctionComponent<ReleasesProps> = props => {
                                 <i className="fa fa-arrow-circle-o-right" aria-hidden="true"/>
                             </div>
                         </a>
-                        <ReleaseSelector/>
+                        <ReleaseSelector
+                            onVersionChange={(e: SyntheticEvent)=> {console.log(e)}}
+                            onJVMChange={(e: SyntheticEvent)=> {console.log(e)}}
+                        />
                     </div>
 
                         <div id="latest-container">
