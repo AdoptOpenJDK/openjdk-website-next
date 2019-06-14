@@ -3,17 +3,22 @@ import Layout from "../components/Layout"
 import Loading from "../components/Loading";
 import ReleaseSelector from "../components/ReleaseSelector";
 
+import "../scss/styles-3-nightly.scss"
+
 export interface NightlyProps {
 }
 
 const Nightly: FunctionComponent<NightlyProps> = props => {
 
-    const thisInstallerLink = false;
-    const platforms = [
-        {
-            placeholder: true
-        }
-    ]
+    const loading = false
+    const thisInstallerLink = false
+    const platforms = [{
+        placeholder: true
+    }]
+
+    if (loading) {
+        return <Loading/>
+    }
 
     return (
         <Layout>
@@ -57,8 +62,6 @@ const Nightly: FunctionComponent<NightlyProps> = props => {
                                                                          aria-hidden="true"/></h3>
             <div id="search-error" className="hide">No search results</div>
 
-            <Loading />
-
             <div id="nightly-list">
                 <table id="table-parent">
                     <thead id="table-head">
@@ -71,8 +74,8 @@ const Nightly: FunctionComponent<NightlyProps> = props => {
                         <th>Checksum</th>
                     </tr>
                     </thead>
-                    <tbody id="nightly-table" className="hide">
-                    { platforms.map(() => {
+                    <tbody id="nightly-table">
+                    {platforms.map(() => {
                         return (
                             <tr className='nightly-container'>
                                 <td className='nightly-platform-block'>Linux aarch64</td>

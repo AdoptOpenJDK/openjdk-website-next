@@ -11,7 +11,17 @@ import Loading from "../components/Loading";
 
 const Archive: FunctionComponent<ArchiveProps> = props => {
 
+    const loading = false
+    const error = false
     const releases = []
+
+    if(loading) {
+        return <Loading />
+    }
+
+    if(error) {
+        return <div id="error-container" />
+    }
 
     return (
         <Layout>
@@ -42,10 +52,6 @@ const Archive: FunctionComponent<ArchiveProps> = props => {
                         onVersionChange={(e: SyntheticEvent)=> {console.log(e)}}
                         onJVMChange={(e: SyntheticEvent)=> {console.log(e)}}
                     />
-
-                    <Loading />
-
-                    <div id="error-container"></div>
 
                     <div id="archive-list" className="hide">
                         <div id="pagination-container"></div>

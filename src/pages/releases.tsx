@@ -1,17 +1,16 @@
 import React, {FunctionComponent, SyntheticEvent} from "react"
-import {ChoiceGroup} from "office-ui-fabric-react/lib/ChoiceGroup"
-
 import Layout from "../components/Layout"
+import Loading from "../components/Loading"
 import ReleasesPlatforms from "../components/Releases/ReleasesPlatforms"
+import ReleaseSelector from "../components/ReleaseSelector"
 
 import "../scss/styles-4-releases.scss"
-import ReleaseSelector from "../components/ReleaseSelector";
 
-export interface ReleasesProps {
-}
+export interface ReleasesProps {}
 
 export const Releases: FunctionComponent<ReleasesProps> = props => {
 
+    const loading = false
     const platforms = [{
         name: 'X64_LINUX',
         logo: '',
@@ -29,6 +28,10 @@ export const Releases: FunctionComponent<ReleasesProps> = props => {
             }
         ]
     }]
+
+    if(loading) {
+        <Loading />
+    }
 
     return (
         <Layout>
