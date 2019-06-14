@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from "react"
-import {Platform} from "../types"
+import {Platform} from "../../types"
 import ReleasesBinary from "./ReleasesBinary";
 
 export interface ReleasesPlatformItemProps {

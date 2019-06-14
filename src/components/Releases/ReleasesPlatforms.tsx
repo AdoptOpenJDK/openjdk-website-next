@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from "react"
-import {Platform} from "../types";
+import {Platform} from "../../types";
 import ReleasesPlatformItem from "./ReleasesPlatformItem";
 
 export interface ReleasesPlatformsProps {

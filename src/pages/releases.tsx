@@ -2,7 +2,7 @@ import React, {FunctionComponent} from "react"
 import {ChoiceGroup} from "office-ui-fabric-react/lib/ChoiceGroup"
 
 import Layout from "../components/Layout"
-import ReleasesPlatforms from "../components/ReleasesPlatforms"
+import ReleasesPlatforms from "../components/Releases/ReleasesPlatforms"
 
 import "../scss/styles-4-releases.scss"
 
