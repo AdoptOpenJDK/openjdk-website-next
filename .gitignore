@@ -72,3 +72,4 @@ yarn-error.log
 # Project files
 .idea
 *.iml
+tsconfig.json
