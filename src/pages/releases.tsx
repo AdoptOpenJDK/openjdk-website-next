@@ -5,8 +5,10 @@ import Layout from "../components/Layout"
 import ReleasesPlatforms from "../components/Releases/ReleasesPlatforms"
 
 import "../scss/styles-4-releases.scss"
+import ReleaseSelector from "../components/ReleaseSelector";
 
-export interface ReleasesProps {}
+export interface ReleasesProps {
+}
 
 export const Releases: FunctionComponent<ReleasesProps> = props => {
 
@@ -38,63 +40,25 @@ export const Releases: FunctionComponent<ReleasesProps> = props => {
                         <a href="./archive.html" className="blue-button a-button">
                             <div>
                                 <span>Build archive</span>
-                                <i className="fa fa-arrow-circle-o-right" aria-hidden="true" />
+                                <i className="fa fa-arrow-circle-o-right" aria-hidden="true"/>
                             </div>
                         </a>
                         <a href="./nightly.html" id="nightly-button" className="grey-button a-button">
                             <div>
                                 <span>Nightly builds</span>
-                                <i className="fa fa-arrow-circle-o-right" aria-hidden="true" />
+                                <i className="fa fa-arrow-circle-o-right" aria-hidden="true"/>
                             </div>
                         </a>
+                        <ReleaseSelector/>
+                    </div>
 
-                        <div className="btn-container">
-                            <form id="jdk-selector" className="btn-form">
-                                <h3>1. Choose a Version</h3>
-                                <ChoiceGroup
-                                    defaultSelectedKey="A"
-                                    options={[
-                                        {
-                                            key: 'A',
-                                            text: 'OpenJDK 8 (LDS)'
-                                        },
-                                        {
-                                            key: 'B',
-                                            text: 'OpenJDK 9'
-                                        },
-                                        {
-                                            key: 'C',
-                                            text: 'OpenJDK 10'
-                                        }
-                                    ]}
-                                />
-                            </form>
-                            <form id="jvm-selector" className="btn-form">
-                                <h3>2. Choose a JVM</h3>
-                                <ChoiceGroup
-                                    defaultSelectedKey="A"
-                                    options={[
-                                        {
-                                            key: 'A',
-                                            text: 'HotSpot'
-                                        },
-                                        {
-                                            key: 'B',
-                                            text: 'OpenJ9'
-                                        }
-                                    ]}
-                                />
-                            </form>
+                        <div id="latest-container">
+                            <ReleasesPlatforms platforms={platforms}/>
                         </div>
                     </div>
-
-                    <div id="latest-container">
-                        <ReleasesPlatforms platforms={platforms} />
-                    </div>
-                </div>
             </main>
         </Layout>
-    )
+)
 }
 
 export default Releases
