@@ -7,6 +7,7 @@ export interface ArchiveProps {
 import "../scss/styles-12-archive.scss"
 import ArchiveReleaseRow from "../components/Archive/ArchiveReleaseRow";
 import ReleaseSelector from "../components/ReleaseSelector";
+import Loading from "../components/Loading";
 
 const Archive: FunctionComponent<ArchiveProps> = props => {
 
@@ -42,9 +43,7 @@ const Archive: FunctionComponent<ArchiveProps> = props => {
                         onJVMChange={(e: SyntheticEvent)=> {console.log(e)}}
                     />
 
-                    <div id="loading">
-                        <img src="dist/assets/loading_dots.gif" width="40" height="40" alt="Content is loading."/>
-                    </div>
+                    <Loading />
 
                     <div id="error-container"></div>
 

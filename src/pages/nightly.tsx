@@ -1,5 +1,6 @@
 import React, {FunctionComponent, SyntheticEvent} from "react"
 import Layout from "../components/Layout"
+import Loading from "../components/Loading";
 import ReleaseSelector from "../components/ReleaseSelector";
 
 export interface NightlyProps {
@@ -54,11 +55,9 @@ const Nightly: FunctionComponent<NightlyProps> = props => {
 
             <h3 id="scroll-text" className="hide">Scroll horizontally <i className="fa fa-arrow-circle-o-right"
                                                                          aria-hidden="true"/></h3>
-
             <div id="search-error" className="hide">No search results</div>
 
-            <div id="loading"><img src="dist/assets/loading_dots.gif" width="40" height="40" alt="Content is loading."/>
-            </div>
+            <Loading />
 
             <div id="nightly-list">
                 <table id="table-parent">
@@ -115,6 +114,3 @@ const Nightly: FunctionComponent<NightlyProps> = props => {
 }
 
 export default Nightly;
-
-
-export const Night
