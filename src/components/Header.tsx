@@ -28,7 +28,7 @@ export const Header: FunctionComponent<HeaderProps> = () => {
         <IconButton
           styles={{
             icon: { color: "white", fontSize: "2.25em" },
-            root: { left: 82, top: 42 },
+            root: { position: "absolute", left: "2rem", top: 0 },
           }}
           iconProps={{ iconName: "bars" }}
           title="Menu"
@@ -38,7 +38,7 @@ export const Header: FunctionComponent<HeaderProps> = () => {
         <Link id="logo" to="/" className="a-button">
           <img src={logo} alt="AdoptOpenJDK" />
         </Link>
-        <div id="header-social-bar">
+        <div id="header-social-bar" style={{ top: "1rem" }}>
           <SocialBar />
         </div>
       </nav>
