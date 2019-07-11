@@ -1,11 +1,12 @@
 {
-  "name": "adoptopenjdk_website",
-  "repository": "https://github.com/AdoptOpenJDK/openjdk-website",
+  "name": "adoptopenjdk_website_next",
+  "repository": "https://github.com/AdoptOpenJDK/openjdk-website-next",
   "private": true,
   "version": "2.0.0",
   "license": "Apache-2.0",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "npm run build && gh-pages -d public",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "gatsby develop",
     "serve": "gatsby serve",
@@ -29,6 +30,7 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
     "gatsby-plugin-typescript": "^2.0.13",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.17.0"
   }
 }
