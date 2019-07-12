@@ -12,16 +12,16 @@ The following table illustrates the proprietary components that can be found in 
 
 |Oracle JDK 8 proprietary component|Alternative component|OpenJDK 8|OpenJDK 11|
 |--- |--- |--- |--- |
-|Java Web Start|[IcedTea-Web](./migration#icedtea-web)|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
-|JavaFX|[OpenJFX](./migration#openjfx)|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i> (coming soon)|
-|T2K font rendering engine|[Freetype](./migration#freetype-font-rendering-library)|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|Monotype Lucida fonts|[Relicensed Lucida fonts](./migration#relicensed-lucida-fonts)|<i class="fa fa-times" aria-hidden="true"></i> (coming soon)|<i class="fa fa-times" aria-hidden="true"></i> (coming soon)|
-|Ductus 2D renderer|[Pisces/Marlin](./migration#pisces-and-marlin)|<i class="fa fa-check" aria-hidden="true"></i> (Pisces)|<i class="fa fa-check" aria-hidden="true"></i> (Marlin)|
-|Kodac Color Matching System (KCMS) library|[LCMS](./migration#lcms)|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|SNMP|Use [JMX](./migration#jmx) (or SNMP4J)|<i class="fa fa-check" aria-hidden="true"></i> (not bundled)|<i class="fa fa-check" aria-hidden="true"></i> (not bundled)|
-|Sound drivers|Use [Windows sound drivers](./migration#windows-sound-drivers)|<i class="fa fa-check" aria-hidden="true"></i> (not bundled)|<i class="fa fa-check" aria-hidden="true"></i> (not bundled)|
-|Java Flight Recorder (JFR)|[Java Flight Recorder](./migration#java-flight-recorder)|<i class="fa fa-times" aria-hidden="true"></i> (coming soon)|<i class="fa fa-check" aria-hidden="true"></i>|
-|Java Mission Control (JMC)|Use [JDK Mission Control](./migration#jdk-mission-control)|<i class="fa fa-times" aria-hidden="true"></i> (coming soon)|<i class="fa fa-times" aria-hidden="true"></i> (coming soon)|
+|Java Web Start|[IcedTea-Web](./migration#icedtea-web)|✔️|✖️|
+|JavaFX|[OpenJFX](./migration#openjfx)|✖️|✖️ (coming soon)|
+|T2K font rendering engine|[Freetype](./migration#freetype-font-rendering-library)|✔️|✔️|
+|Monotype Lucida fonts|[Relicensed Lucida fonts](./migration#relicensed-lucida-fonts)|✖️ (coming soon)|✖️ (coming soon)|
+|Ductus 2D renderer|[Pisces/Marlin](./migration#pisces-and-marlin)|✔️ (Pisces)|✔️ (Marlin)|
+|Kodac Color Matching System (KCMS) library|[LCMS](./migration#lcms)|✔️|✔️|
+|SNMP|Use [JMX](./migration#jmx) (or SNMP4J)|✔️ (not bundled)|✔️ (not bundled)|
+|Sound drivers|Use [Windows sound drivers](./migration#windows-sound-drivers)|✔️ (not bundled)|✔️ (not bundled)|
+|Java Flight Recorder (JFR)|[Java Flight Recorder](./migration#java-flight-recorder)|✖️ (coming soon)|✔️|
+|Java Mission Control (JMC)|Use [JDK Mission Control](./migration#jdk-mission-control)|✖️ (coming soon)|✖️ (coming soon)|
 
 ### IcedTea-Web
 Java Web Start was deprecated by Oracle in Java SE 8 and removed in Java SE 9. IcedTea-Web can provide equivalent functionality for AdoptOpenJDK 8 users.
