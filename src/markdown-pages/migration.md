@@ -5,23 +5,23 @@ title: "Migration Guide"
 ## Migrating to AdoptOpenJDK
 If you are moving from Oracle JDK to OpenJDK from the AdoptOpenJDK project, you'll probably have a few key questions on your mind. Firstly, you'll want to know what the differences are between Oracle JDK and AdoptOpenJDK and whether there are any steps you need to take to migrate. If you've looked at the home page, you'll also know that we provide AdoptOpenJDK binaries with a choice of Java Virtual Machine (JVM). So, you might also be wondering what the difference is between the HotSpot JVM and Eclipse OpenJ9 JVM and whether your existing applications will run without any changes. The answers to these questions are covered in the sections that follow.
 
-To understand which platforms are supported, see the [Platform Support Matrix](./supported_platforms).
+To understand which platforms are supported, see the [Platform Support Matrix](./supported-platforms).
 
 ## Migrating from Oracle JDK
 The following table illustrates the proprietary components that can be found in Oracle JDK 8 and the alternative technologies that are either planned or available to replace them. Click on the links to learn more about each component and any steps that might be necessary to adopt them.
 
 |Oracle JDK 8 proprietary component|Alternative component|OpenJDK 8|OpenJDK 11|
 |--- |--- |--- |--- |
-|Java Web Start|[IcedTea-Web](./migration#icedtea-web)|✔️|✖️|
-|JavaFX|[OpenJFX](./migration#openjfx)|✖️|✖️ (coming soon)|
-|T2K font rendering engine|[Freetype](./migration#freetype-font-rendering-library)|✔️|✔️|
-|Monotype Lucida fonts|[Relicensed Lucida fonts](./migration#relicensed-lucida-fonts)|✖️ (coming soon)|✖️ (coming soon)|
-|Ductus 2D renderer|[Pisces/Marlin](./migration#pisces-and-marlin)|✔️ (Pisces)|✔️ (Marlin)|
-|Kodac Color Matching System (KCMS) library|[LCMS](./migration#lcms)|✔️|✔️|
-|SNMP|Use [JMX](./migration#jmx) (or SNMP4J)|✔️ (not bundled)|✔️ (not bundled)|
-|Sound drivers|Use [Windows sound drivers](./migration#windows-sound-drivers)|✔️ (not bundled)|✔️ (not bundled)|
-|Java Flight Recorder (JFR)|[Java Flight Recorder](./migration#java-flight-recorder)|✖️ (coming soon)|✔️|
-|Java Mission Control (JMC)|Use [JDK Mission Control](./migration#jdk-mission-control)|✖️ (coming soon)|✖️ (coming soon)|
+|Java Web Start|[IcedTea-Web](#icedtea-web)|✔️|✖️|
+|JavaFX|[OpenJFX](#openjfx)|✖️|✖️ (coming soon)|
+|T2K font rendering engine|[Freetype](#freetype-font-rendering-library)|✔️|✔️|
+|Monotype Lucida fonts|[Relicensed Lucida fonts](#relicensed-lucida-fonts)|✖️ (coming soon)|✖️ (coming soon)|
+|Ductus 2D renderer|[Pisces/Marlin](#pisces-and-marlin)|✔️ (Pisces)|✔️ (Marlin)|
+|Kodac Color Matching System (KCMS) library|[LCMS](#lcms)|✔️|✔️|
+|SNMP|Use [JMX](#jmx) (or SNMP4J)|✔️ (not bundled)|✔️ (not bundled)|
+|Sound drivers|Use [Windows sound drivers](#windows-sound-drivers)|✔️ (not bundled)|✔️ (not bundled)|
+|Java Flight Recorder (JFR)|[Java Flight Recorder](#java-flight-recorder)|✖️ (coming soon)|✔️|
+|Java Mission Control (JMC)|Use [JDK Mission Control](#jdk-mission-control)|✖️ (coming soon)|✖️ (coming soon)|
 
 ### IcedTea-Web
 Java Web Start was deprecated by Oracle in Java SE 8 and removed in Java SE 9. IcedTea-Web can provide equivalent functionality for AdoptOpenJDK 8 users.

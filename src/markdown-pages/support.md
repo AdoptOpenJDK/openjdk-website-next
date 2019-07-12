@@ -42,7 +42,7 @@ Notes:
   <a href="./quality" class="no-underline home-links">
     <h2 class="inline-block zero-margin">Quality&nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></h2>
   </a>
-  <a href="./supported_platforms" class="no-underline home-links">
+  <a href="./supported-platforms" class="no-underline home-links">
     <h2 class="inline-block zero-margin">Supported Platforms&nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></h2>
   </a>
   <a href="https://github.com/AdoptOpenJDK/openjdk-build/issues" class="no-underline home-links" target="_blank">
