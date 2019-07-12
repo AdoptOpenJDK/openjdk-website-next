@@ -7,7 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "deploy": "npm run build && gh-pages -d public",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
@@ -36,6 +36,14 @@
     "@types/react-helmet": "^5.0.8",
     "gatsby-plugin-typescript": "^2.0.13",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.17.0"
-  }
+    "husky": "^3.0.0",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {}
 }
