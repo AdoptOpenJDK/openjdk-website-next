@@ -13,8 +13,8 @@ As a community of open source developers, our commitment is to triage any issues
 
 |||
 |--- |--- |
-|![IBM logo](./images/ibm.svg){width=200}|IBM is a core contributor to OpenJDK and Eclipse OpenJ9 and employs several of the founders of AdoptOpenJDK and key engineers on the AdoptOpenJDK project. See [IBM Runtimes for Business](https://www.ibm.com/cloud/support-for-runtimes){target="_blank"} for more details.|
-|![jClarity logo](./images/jclarity.png){width=200}|Hotspot VM - jClarity employs several of the founders of AdoptOpenJDK and key engineers on the AdoptOpenJDK project. See [jClarity's AdoptOpenJDK Support](https://www.jclarity.com/adoptopenjdk-support/){target="_blank"} for more details.|
+|![IBM logo](/images/ibm.svg){width=200}|IBM is a core contributor to OpenJDK and Eclipse OpenJ9 and employs several of the founders of AdoptOpenJDK and key engineers on the AdoptOpenJDK project. See [IBM Runtimes for Business](https://www.ibm.com/cloud/support-for-runtimes){target="_blank"} for more details.|
+|![jClarity logo](/images/jclarity.png){width=200}|Hotspot VM - jClarity employs several of the founders of AdoptOpenJDK and key engineers on the AdoptOpenJDK project. See [jClarity's AdoptOpenJDK Support](https://www.jclarity.com/adoptopenjdk-support/){target="_blank"} for more details.|
 
 </div>
 
