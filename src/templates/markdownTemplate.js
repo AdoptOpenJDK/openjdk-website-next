@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout";
+import EditLink from '../components/EditLink';
 
 import "../scss/styles-15-markdown.scss"
 
@@ -20,6 +21,7 @@ export default function Template({
         />
       </div>
     </div>
+    <EditLink relativePath={frontmatter.path} />
     </Layout>
   )
 }
