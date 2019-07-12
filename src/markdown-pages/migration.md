@@ -32,8 +32,7 @@ IcedTea-Web is also available as an optional component of the AdoptOpenJDK insta
 
 By default, IcedTea-Web is installed into the OpenJDK directory and has the same executable name (`javaws.exe`) as Java Web Start. To configure settings, such as security or certificates, start the control panel by running `itweb-settings.exe`.
 
-Use IcedTea-Web in the same way as Java Web Start. For more information, see <a href="https://docs.oracle.com/javase/tutorial/deployment/webstart/developing.html" target="_blank">Developing a Java Web Start application</a> and <a href="https://docs.oracle.com/javase/tutorial/deployment/webstart/deploying.html"
-target="_blank">Deploying a Java Web Start application</a>. Whilst IcedTea-Web is written to operate in the same way as Java Web Start there are a few known differences, which are raised as issues in the <a href="https://github.com/AdoptOpenJDK/icedtea-web" target="_blank">GitHub project</a>. Work is ongoing to minimize or eliminate these differences.
+Use IcedTea-Web in the same way as Java Web Start. For more information, see [Developing a Java Web Start application](https://docs.oracle.com/javase/tutorial/deployment/webstart/developing.html){target="_blank"} and [Deploying a Java Web Start application](https://docs.oracle.com/javase/tutorial/deployment/webstart/deploying.html){target="_blank"}. Whilst IcedTea-Web is written to operate in the same way as Java Web Start there are a few known differences, which are raised as issues in the [GitHub project](https://github.com/AdoptOpenJDK/icedtea-web){target="_blank"}. Work is ongoing to minimize or eliminate these differences.
 
 Note: Currently, IcedTea-Web is bundled only with the Windows MSI installer for AdoptOpenJDK 8. The installers are available only for x64 Windows systems. Further work is underway to provide IcedTea-Web as an optional component of AdoptOpenJDK 8 installers for other platforms.
 
@@ -64,15 +63,15 @@ Oracle JDK provides native sound drivers for Java 8 on Windows, which are not pr
 Java Flight Recorder (JFR) was decoupled from the Oracle JDK and contributed to the OpenJDK community. Work is underway to backport JFR from OpenJDK 11 to OpenJDK 8. When this work is complete, AdoptOpenJDK will include JFR in OpenJDK 8 binaries.
 
 ### JDK Mission Control
-Java Mission Control (JMC) is being open sourced under the OpenJDK <a href="https://github.com/JDKMissionControl/jmc" target="_blank">JDK Mission Control project</a>. When available, JMC will be able to receive JFR events from OpenJDK 11 and eventually OpenJDK 8, when that backport is complete.
+Java Mission Control (JMC) is being open sourced under the OpenJDK [JDK Mission Control project](https://github.com/JDKMissionControl/jmc){target="_blank"}. When available, JMC will be able to receive JFR events from OpenJDK 11 and eventually OpenJDK 8, when that backport is complete.
 
 ### Migrating to Eclipse OpenJ9
-<a href="https://www.eclipse.org/openj9" target="_blank">Eclipse OpenJ9</a> is an alternative JVM that implements the <a href="https://docs.oracle.com/javase/specs/index.html" target="_blank">Java Virtual Machine Specification</a>. You can think of it as a drop in replacement for the HotSpot VM, which is part of the reference implementation. Most Java applications should run on an OpenJDK that contains the OpenJ9 VM without changing anything. However, because it is an independent implementation there are some slight differences. You can learn about these differences by reading the <a href="https://www.eclipse.org/openj9/docs/openj9_newuser/" target="_blank">New to OpenJ9?</a> topic in the OpenJ9 user documentation.
+[Eclipse OpenJ9](https://www.eclipse.org/openj9){target="_blank"} is an alternative JVM that implements the [Java Virtual Machine Specification](https://docs.oracle.com/javase/specs/index.html){target="_blank"}. You can think of it as a drop in replacement for the HotSpot VM, which is part of the reference implementation. Most Java applications should run on an OpenJDK that contains the OpenJ9 VM without changing anything. However, because it is an independent implementation there are some slight differences. You can learn about these differences by reading the [New to OpenJ9?](https://www.eclipse.org/openj9/docs/openj9_newuser/){target="_blank"} topic in the OpenJ9 user documentation.
 
 ### More resources
 Here are a few of the resources available to help you with migrating to AdoptOpenJDK:
 
 - Ask questions directly by joining the [AdoptOpenJDK Community Slack](./slack) group.
-- Learn more about the AdoptOpenJDK project, including build and test infrastructure, by reading the <a href="https://github.com/AdoptOpenJDK/TSC" target="_blank">Technical Steering Committee</a> documentation.
-- For HotSpot VM documentation, see the <a href="http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html" target="_blank">HotSpot Runtime Overview</a>.
-- For OpenJ9 VM documentation, see the <a href="https://www.eclipse.org/openj9/docs/" target="_blank">OpenJ9 user documentation</a>.
+- Learn more about the AdoptOpenJDK project, including build and test infrastructure, by reading the [Technical Steering Committee](https://github.com/AdoptOpenJDK/TSC){target="_blank"} documentation.
+- For HotSpot VM documentation, see the [HotSpot Runtime Overview](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html){target="_blank"}.
+- For OpenJ9 VM documentation, see the [OpenJ9 user documentation](https://www.eclipse.org/openj9/docs){target="_blank"}.

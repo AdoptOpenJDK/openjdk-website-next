@@ -12,7 +12,7 @@ export default function Template({
   return (
     <Layout>
     <div className="markdown-container">
-      <div className="markdown"
+      <div className="markdown">
         <h1>{frontmatter.title}</h1>
         <div
           className="markdown-content"

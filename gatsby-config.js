@@ -10,7 +10,10 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-autolink-headers`],
+        plugins: [
+            `gatsby-remark-autolink-headers`,
+            `gatsby-remark-attr`,
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
