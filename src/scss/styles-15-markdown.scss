@@ -31,6 +31,19 @@ div .commercial-support {
     padding: 1em;
   }
 }
- div.markdown-container {
-   padding-bottom: 1em;
- }
+
+div .markdown-container {
+  padding-bottom: 1em;
+}
+
+.supported-platforms table {
+  margin: 0;
+}
+
+.fa-star-o.hotspot {
+    color: orange;
+}
+
+.fa-star-o.openj9 {
+    color: purple;
+}
