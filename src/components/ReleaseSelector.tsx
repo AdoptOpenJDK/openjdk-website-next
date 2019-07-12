@@ -1,15 +1,15 @@
-import React, { FunctionComponent, SyntheticEvent } from "react"
+import React, { FunctionComponent, SyntheticEvent } from "react";
 
-import { ChoiceGroup } from "office-ui-fabric-react"
+import { ChoiceGroup } from "office-ui-fabric-react";
 
 export interface ReleaseSelectorProps {
-  onVersionChange(e: SyntheticEvent): void
-  onJVMChange(e: SyntheticEvent): void
+  onVersionChange(e: SyntheticEvent): void;
+  onJVMChange(e: SyntheticEvent): void;
 }
 
 const ReleaseSelector: FunctionComponent<ReleaseSelectorProps> = ({
   onVersionChange,
-  onJVMChange,
+  onJVMChange
 }) => {
   return (
     <div className="btn-container">
@@ -21,16 +21,16 @@ const ReleaseSelector: FunctionComponent<ReleaseSelectorProps> = ({
           options={[
             {
               key: "A",
-              text: "OpenJDK 8 (LDS)",
+              text: "OpenJDK 8 (LDS)"
             },
             {
               key: "B",
-              text: "OpenJDK 9",
+              text: "OpenJDK 9"
             },
             {
               key: "C",
-              text: "OpenJDK 10",
-            },
+              text: "OpenJDK 10"
+            }
           ]}
         />
       </form>
@@ -86,17 +86,17 @@ const ReleaseSelector: FunctionComponent<ReleaseSelectorProps> = ({
           options={[
             {
               key: "A",
-              text: "HotSpot",
+              text: "HotSpot"
             },
             {
               key: "B",
-              text: "OpenJ9",
-            },
+              text: "OpenJ9"
+            }
           ]}
         />
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default ReleaseSelector
+export default ReleaseSelector;

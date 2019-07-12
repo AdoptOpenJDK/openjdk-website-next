@@ -1,10 +1,10 @@
-import "../scss/styles-2-index.scss"
+import "../scss/styles-2-index.scss";
 
-import Layout from "../components/Layout"
-import { Link } from "gatsby"
-import React from "react"
-import ReleaseSelector from "../components/ReleaseSelector"
-import loadingDots from "../assets/loading_dots.gif"
+import Layout from "../components/Layout";
+import { Link } from "gatsby";
+import React from "react";
+import ReleaseSelector from "../components/ReleaseSelector";
+import loadingDots from "../assets/loading_dots.gif";
 
 const App: React.FunctionComponent = () => {
   return (
@@ -215,7 +215,7 @@ const App: React.FunctionComponent = () => {
         </div>
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default App
+export default App;

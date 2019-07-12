@@ -1,30 +1,30 @@
-import "./index.css"
-import "../scss/styles-0-master.scss"
-import "../scss/styles-1-large-main.scss"
+import "./index.css";
+import "../scss/styles-0-master.scss";
+import "../scss/styles-1-large-main.scss";
 
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent } from "react";
 
-import Footer from "./Footer"
-import Header from "./Header"
-import Helmet from "react-helmet"
-import { registerIcons } from "office-ui-fabric-react"
+import Footer from "./Footer";
+import Header from "./Header";
+import Helmet from "react-helmet";
+import { registerIcons } from "office-ui-fabric-react";
 
 registerIcons({
   icons: {
     "arrow-circle-left": <i className="fa fa-arrow-circle-left" />,
     bars: <i className="fa fa-bars" />,
     cancel: <i className="fa fa-times" />,
-    chevrondown: <i className="fa fa-chevron-down" />,
-  },
-})
+    chevrondown: <i className="fa fa-chevron-down" />
+  }
+});
 
 export interface LayoutProps {
-  className?: string
+  className?: string;
 }
 
 export const Layout: FunctionComponent<LayoutProps> = ({
   children,
-  className = "",
+  className = ""
 }) => {
   return (
     <>
@@ -62,7 +62,7 @@ export const Layout: FunctionComponent<LayoutProps> = ({
       <main className={`grey-bg ${className}`}>{children}</main>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
