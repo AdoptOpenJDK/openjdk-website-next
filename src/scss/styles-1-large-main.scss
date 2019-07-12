@@ -477,25 +477,6 @@ span.hljs-strong {
   padding: 0.5rem 1rem;
 }
 
-a.anchor {
-  visibility: hidden;
-  float: left;
-  padding: 0.2rem;
-}
-
-div.anchor {
-  position: relative;
-  left: -25px;
-
-  a.anchor {
-    visibility: hidden;
-  }
-
-  &:hover a.anchor {
-    visibility: visible;
-  }
-}
-
 // SELECT ELEMENT - REMOVING DEFAULT STYLING
 select#platform-selector {
   // CHANGE FROM DISPLAY NONE TO DISPLAY BLOCK TO ACTIVATE VARIANT SELECTOR
