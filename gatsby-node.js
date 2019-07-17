@@ -8,18 +8,18 @@ exports.createPages = ({ actions, graphql }) => {
 
   const markdownTemplate = path.resolve(`src/templates/markdownTemplate.js`)
 
-  createRedirect({
-    fromPath: `/supported_platforms`,
-    isPermanent: true,
-    redirectInBrowser: true,
-    toPath: `/supported-platforms`,
-  })
+  let redirects = [
+    { f: `/supported_platforms`, t: `/supported-platforms` },
+    { f: `/getinvolved`, t: `/get-involved` },
+  ]
 
-  createRedirect({
-    fromPath: `/getinvolved`,
-    isPermanent: true,
-    redirectInBrowser: true,
-    toPath: `/get-involved`,
+  redirects.forEach(({ f, t }) => {
+    createRedirect({
+      fromPath: f,
+      isPermanent: true,
+      redirectInBrowser: true,
+      toPath: t,
+    })
   })
 
   return graphql(`
