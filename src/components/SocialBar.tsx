@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent } from "react";
 
 export interface SocialBarProps {}
 
@@ -50,7 +50,7 @@ export const SocialBar: FunctionComponent<SocialBarProps> = () => {
         </a>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SocialBar
+export default SocialBar;

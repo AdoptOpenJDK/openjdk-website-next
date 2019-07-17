@@ -1,5 +1,5 @@
-import { css, SerializedStyles } from '@emotion/core';
-import React from 'react';
+import { css, SerializedStyles } from "@emotion/core";
+import React from "react";
 
 const edit: SerializedStyles = css`
   display: flex;
@@ -42,7 +42,7 @@ const EditLink = ({ relativePath }: Props) => {
   return (
     <div css={edit}>
       <a css={link} href={href} target="_blank">
-        <span>Edit this page on GitHub</span>{' '}
+        <span>Edit this page on GitHub</span>{" "}
         <svg
           css={icon}
           fill="currentColor"

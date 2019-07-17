@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent } from "react";
 
-import { Link } from "gatsby"
-import SocialBar from "./SocialBar"
-import gitHubIcon from "./Footer/GitHub.png"
-import jenkinsIcon from "./Footer/jenkins_headshot.png"
-import slackIcon from "./Footer/slack.svg"
+import { Link } from "gatsby";
+import SocialBar from "./SocialBar";
+import gitHubIcon from "./Footer/GitHub.png";
+import jenkinsIcon from "./Footer/jenkins_headshot.png";
+import slackIcon from "./Footer/slack.svg";
 
 export interface FooterProps {}
 
@@ -72,7 +72,7 @@ export const Footer: FunctionComponent<FooterProps> = () => {
         </a>
       </p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
