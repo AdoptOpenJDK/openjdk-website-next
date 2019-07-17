@@ -10,15 +10,15 @@ exports.createPages = ({ actions, graphql }) => {
 
   let redirects = [
     { f: `/supported_platforms`, t: `/supported-platforms` },
-    { f: `/getinvolved`, t: `/get-involved` }
-  ];
+    { f: `/getinvolved`, t: `/get-involved` },
+  ]
 
   redirects.forEach(({ f, t }) => {
     createRedirect({
       fromPath: f,
       isPermanent: true,
       redirectInBrowser: true,
-      toPath: t
+      toPath: t,
     });
   });
 
