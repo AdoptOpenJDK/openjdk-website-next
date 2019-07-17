@@ -1,12 +1,12 @@
-"use strict"
+"use strict";
 
-const path = require(`path`)
+const path = require(`path`);
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
-  const { createRedirect } = actions
+  const { createPage } = actions;
+  const { createRedirect } = actions;
 
-  const markdownTemplate = path.resolve(`src/templates/markdownTemplate.js`)
+  const markdownTemplate = path.resolve(`src/templates/markdownTemplate.js`);
 
   let redirects = [
     { f: `/supported_platforms`, t: `/supported-platforms` },
@@ -19,8 +19,8 @@ exports.createPages = ({ actions, graphql }) => {
       isPermanent: true,
       redirectInBrowser: true,
       toPath: t,
-    })
-  })
+    });
+  });
 
   return graphql(`
     {
@@ -37,15 +37,15 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors)
+      return Promise.reject(result.errors);
     }
 
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: markdownTemplate,
-        context: {}, // additional data can be passed via context
-      })
-    })
-  })
-}
+        context: {} // additional data can be passed via context
+      });
+    });
+  });
+};
