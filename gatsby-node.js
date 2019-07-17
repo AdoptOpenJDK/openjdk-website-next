@@ -1,9 +1,26 @@
+"use strict"
+
 const path = require(`path`)
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
+  const { createRedirect } = actions
 
   const markdownTemplate = path.resolve(`src/templates/markdownTemplate.js`)
+
+  createRedirect({
+    fromPath: `/supported_platforms`,
+    isPermanent: true,
+    redirectInBrowser: true,
+    toPath: `/supported-platforms`,
+  })
+
+  createRedirect({
+    fromPath: `/getinvolved`,
+    isPermanent: true,
+    redirectInBrowser: true,
+    toPath: `/get-involved`,
+  })
 
   return graphql(`
     {

@@ -60,8 +60,8 @@ export const Menu: FunctionComponent<MenuProps> = ({ isOpen, onClick }) => {
                 name: "Further information",
                 links: [
                   { name: "Quality", url: "/quality" },
-                  { name: "Supported Platforms", url: "/supported_platforms" },
-                  { name: "Get involved!", url: "/getinvolved" },
+                  { name: "Supported Platforms", url: "/supported-platforms" },
+                  { name: "Get involved!", url: "/get-involved" },
                   { name: "Sponsors", url: "/sponsors" },
                   { name: "About", url: "/about" },
                 ],
