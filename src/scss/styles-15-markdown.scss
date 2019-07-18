@@ -12,6 +12,10 @@ h1 {
 table {
   margin: 0 auto;
   padding: 1rem;
+  display: block;
+  @media only screen and (max-device-width: 800px) {
+    overflow-x: scroll;
+  }
 }
 
 .anchor {
@@ -24,11 +28,19 @@ table {
 
 div .commercial-support {
   background-color: white;
+
   th {
     background-color: white;
   }
+
   td {
     padding: 1em;
+  }
+  @media all and (max-width: 800px) {
+    td {
+      padding: 1rem;
+      display: block;
+    }
   }
 }
 
@@ -41,9 +53,9 @@ div .markdown-container {
 }
 
 .fa-star-o.hotspot {
-    color: orange;
+  color: orange;
 }
 
 .fa-star-o.openj9 {
-    color: purple;
+  color: purple;
 }

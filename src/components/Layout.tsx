@@ -1,6 +1,8 @@
 import "./index.css";
 import "../scss/styles-0-master.scss";
 import "../scss/styles-1-large-main.scss";
+import "../scss/styles-5-medium.scss";
+import "../scss/styles-6-small.scss";
 
 import React, { FunctionComponent } from "react";
 
