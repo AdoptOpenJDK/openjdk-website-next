@@ -1,12 +1,27 @@
 import "../scss/styles-2-index.scss";
 
 import Layout from "../components/Layout";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import ReleaseSelector from "../components/ReleaseSelector";
 import loadingDots from "../assets/loading_dots.gif";
 
+const platformsQuery = graphql`
+  query PlatformsQuery {
+    allPlatforms {
+      nodes {
+        osDetectionString
+        officialName
+      }
+    }
+  }
+`;
+
 const App: React.FunctionComponent = () => {
+  const osTitle = "";
+  const platformsData = useStaticQuery(platformsQuery);
+  const platform = platformsData.allPlatforms.nodes.find(platform => {});
+
   return (
     <Layout>
       <main className="grey-bg home-main">
@@ -67,9 +82,7 @@ const App: React.FunctionComponent = () => {
         </p>
 
         <div className="dl-container">
-          <h2 id="dl-text" className="invisible">
-            Downloads
-          </h2>
+          <h2>{osTitle !== "" ? `Download for ${osTitle}` : "Downloads"}</h2>
           <ReleaseSelector onVersionChange={_ => {}} onJVMChange={_ => {}} />
           <div id="loading">
             <img
